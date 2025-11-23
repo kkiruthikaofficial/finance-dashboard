@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Finance Dashboard — Edit Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Finance Dashboard</h1>
+
+    <div class="card">
+      <h2 id="form-title">Add Expense</h2>
+      <div class="form">
+        <input type="text" id="title" placeholder="Expense Title" />
+        <input type="number" id="amount" placeholder="Amount" />
+        <input type="date" id="date" />
+        <select id="category">
+          <option>Food</option>
+          <option>Bills</option>
+          <option>Shopping</option>
+          <option>Travel</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div style="margin-top:10px; display:flex; gap:8px;">
+        <button id="addBtn">Add</button>
+        <button id="cancelBtn" class="hidden">Cancel</button>
+      </div>
+    </div>
+
+    <div class="card controls">
+      <input id="search" placeholder="Search title or category" />
+      <select id="filterCat"><option value="All">All categories</option></select>
+      <button id="clearAll">Clear All</button>
+      <div style="margin-left:auto">
+        <button id="exportBtn">Export CSV</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Expense List</h2>
+      <table>
+        <thead>
+          <tr><th>Title</th><th>Amount</th><th>Date</th><th>Category</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="expense-list"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
